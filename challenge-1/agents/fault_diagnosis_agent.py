@@ -69,12 +69,14 @@ Grounding rules (IMPORTANT):
                         server_url=machine_data_mcp_endpoint,
                         require_approval="never",
                         project_connection_id="machine-data-connection"
-                    ),
-
-                    # TODO: add Foundry IQ MCP tool
-
+                    ),                    
+                    MCPTool( # TODO: add Foundry IQ MCP tool
+                        server_label="machine-wiki",
+                        server_url=machine_wiki_mcp_endpoint,
+                        require_approval="never",
+                        project_connection_id="machine-wiki-connection"
+                    )
                 ]
-
             ))
         print(f"✅ Created Fault Diagnosis Agent: {agent.id}")
         # Test the agent with a simple query
